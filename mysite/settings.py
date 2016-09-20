@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bomberos',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'primeravaldivia$default',
+        'USER': 'primeravaldivia',
+        'PASSWORD': 'bomberos',
+        'HOST': 'mysql.server',
+        'PORT': '',
     }
 }
 
