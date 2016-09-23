@@ -6,7 +6,6 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
-import requests
 from django.contrib import auth
 from datetime import datetime
 
@@ -20,7 +19,7 @@ from .models import Evento
 #    return page_not_found(request, template_name=nombre_template)
 
 def login_web(request):
-    com = Compania.objects.all()           
+    com = Compania.objects.all()
     return render(request, 'webBomberos/login.html', {'compania':com})
 
 def login(request):
@@ -54,7 +53,7 @@ def logout(request):
         return redirect('home')
 
 @login_required(login_url='/login_required')
-def home(request):           
+def home(request):
     return render(request, 'webBomberos/home.html')
 
 @login_required(login_url='/login_required')
@@ -67,7 +66,7 @@ def compania_list(request):
 @login_required(login_url='/login_required')
 def voluntarios_list(request):
     try:
-        vol = []    
+        vol = []
         global pk_compania_actual
         #vol = Voluntario.objects.all()
         c = Companiavoluntario.objects.filter(fk_companiavol=pk_compania_actual)
@@ -113,7 +112,7 @@ def voluntario_edit(request, pk):
      #return HttpResponse(vol.ciudadnacimiento)
      return render(request, 'webBomberos/voluntario_edit.html', {'voluntario':vol})
 
-@login_required(login_url='/login_required')     
+@login_required(login_url='/login_required')
 def voluntario_editado(request, pk):
     if request.method == "POST":
          global pk_compania_actual
@@ -134,7 +133,7 @@ def voluntario_editado(request, pk):
          else:
             ser=0
          global pk_compania_actual
-         
+
          v = Voluntario.objects.get(rut=rut)
          v.rut = rut
          v.nombre = nombre

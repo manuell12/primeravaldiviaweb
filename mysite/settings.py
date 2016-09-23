@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'jivaq=%m=0i56gfe55$65g%2_nz0ba0_zg*xk!tg)ubm4h0^*('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bomberos',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'primeravaldivia$default',
+        'USER': 'primeravaldivia',
+        'PASSWORD': 'bomberos',
+        'HOST': 'primeravaldivia.mysql.pythonanywhere-services.com',
+        'PORT': '',
     }
 }
 
