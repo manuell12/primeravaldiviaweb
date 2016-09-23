@@ -78,6 +78,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'TEST_NAME': 'test_primeravaldivia$default',
         'NAME': 'primeravaldivia$default',
         'USER': 'primeravaldivia',
         'PASSWORD': 'bomberos',
