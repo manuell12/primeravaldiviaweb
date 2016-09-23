@@ -81,7 +81,11 @@ DATABASES = {
         'NAME': 'primeravaldivia$default',
         'USER': 'primeravaldivia',
         'PASSWORD': 'bomberos',
+<<<<<<< HEAD
         'HOST': 'primeravaldivia.mysql.pythonanywhere-services.com',
+=======
+        'HOST': 'mysql.server',
+>>>>>>> 7558185dfc273b1277eaa8271516a3161efca0e5
         'PORT': '',
     }
 }
