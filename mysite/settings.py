@@ -83,6 +83,9 @@ DATABASES = {
         'PASSWORD': 'bomberos',
         'HOST': 'primeravaldivia.mysql.pythonanywhere-services.com',
         'PORT': '',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 
